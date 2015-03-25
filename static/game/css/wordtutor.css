@@ -1,0 +1,111 @@
+::-webkit-scrollbar {
+    display: none;
+}
+.stage{
+    height: 100%;
+    position: absolute;
+    left:0;
+    right:0;
+    margin:3px;
+}
+.card {
+    transform-style:preserve-3d;
+    background-color:rgba(73,160,154,0.437255);
+    transition-duration:1s;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    -webkit-box-shadow:0 0 36px rgba(231,254,237,0.6);
+    box-shadow:0 0 36px rgba(231,254,237,0.6);
+    color:rgba(240,240,240,0.8);
+    -webkit-backface-visibility:visible;
+    backface-visibility:visible;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    tap-highlight-color:rgba(0,0,0,0);
+}
+.card-face {
+    /*transform:perspective(700px);
+    -webkit-transform:perspective(700px);*/
+}
+.card-hover {
+    /*transform:perspective(700px) rotateX(180deg);
+    -webkit-transform:perspective(700px) rotateX(180deg);*/
+}
+.hide {
+    display:none;
+}
+.features {
+    transform:perspective(700px) rotateX(180deg);
+    -webkit-transform:perspective(700px) rotateX(180deg);
+}
+.block-container {
+    float:left;
+    width:20%;
+}
+.block-level {
+    height:200px;
+    line-height:200px;
+    margin:3px;
+    overflow:hidden;
+}
+body {
+    margin:0;
+    background-color:black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+a {
+	color: #f0f0f0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+.point:hover {
+    cursor:pointer;
+}
+.payer_menu {
+    margin-left:14px;
+}
+.title {
+    text-shadow:0 0 30px #3cf;
+    font-size:3em;
+}
+.features{
+    text-shadow:0 0 30px #3cf;
+    font-size:20px;
+}
+.modal-content{
+    background-color:rgba(73,160,154,0.937255);
+    color:rgba(240,240,240,0.8);
+}
+.form-control{
+    background-color:rgba(0,0,0,0.137255);
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+    background-color:rgba(0,0,0,0.137255);
+}
+.dropdown-menu{
+    background-color:rgba(0,0,0,0.137255);
+}
+.curclass{
+    background: rgba(73,160,154,0.637255);
+}
+@media (max-width:1280px){
+    .title {
+        text-shadow:0 0 30px #3cf;
+        font-size:2em;
+    }
+}
+@media (max-width:768px){
+    .title {
+        text-shadow:0 0 30px #3cf;
+        font-size:1em;
+    }
+    .features{
+        text-shadow:0 0 30px #3cf;
+        font-size:10px;
+    }
+}

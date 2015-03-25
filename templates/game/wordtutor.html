@@ -1,0 +1,24 @@
+{% extends "game/base/wordtutorbase.html" %}
+{% load i18n %} 
+{% block head %}
+<title>天书实验室</title>
+{% endblock %}
+{% block content %}
+{% include "game/nav/wordtutornav.html" %}
+<div class='stage {% if hide == '' %}cbp-spmenu-push-toright{% endif %} ' id='stage'>
+{% for module in results %}
+<div class='block-container'>
+<div class='block-level center card card-face' id='no{{forloop.counter0}}'>
+    <div class='center-in word title'>{{module.title}}</div>
+    <div class='center-in word hide features'>{{module.features}}</div>
+</div>
+</div>
+{% endfor %}
+</div>
+{% include "game/form/wordaddform.html" %}
+{% include "game/form/wordsetform.html" %}
+{% include "game/form/wordrecordform.html" %}
+<input type="hidden" id="length" width="{{results | length}}">
+<input type="hidden" id="page" value="1">
+<input type="hidden" id="classify" value="{{classify}}">
+{% endblock %}

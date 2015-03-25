@@ -1,0 +1,20 @@
+<nav class="cbp-spmenu {% if hide == '' %}cbp-spmenu-open{% endif %} cbp-spmenu-vertical cbp-spmenu-left" id="menu">
+    <div><table id='menu-title'>
+        <tr>
+            <td rowspan="3" id='menu-caidan'>菜单</td>
+            <td id="add-menu" class="point" data-toggle="modal" data-target="#add_modal" >添加</td>
+            <td id="set-menu" class="point" data-toggle="modal" data-target="#set_modal" >设置</td>
+        </tr>
+        <tr>
+            <td id="confuse-menu" class="point">打乱</td>
+            <td id="paging-menu" class="point">翻页</td>
+        </tr>
+        <tr>
+            <td id="record-menu" class="point" data-toggle="modal" data-target="#record_modal" >记录</td>
+            <td id='close-menu' class="point">隐藏</td>
+        </tr>
+    </table></div>
+    {% for i in classes %}
+    <a class='subclass {% if i == classify %}curclass{% endif %}' value='{{i}}'>{{i}}</a>
+    {% endfor %}
+</nav>
